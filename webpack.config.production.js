@@ -45,6 +45,14 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass')
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
+      },
+      {
+        test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+        loader: 'imports?jQuery=jquery'
       }
     ]
   },

@@ -1,0 +1,19 @@
+.kanji {
+  display: inline-block;
+  font-size: 48px;
+  border: 1px solid #eeeeee;
+  width: 72px;
+  height: 72px;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  a {
+	text-decoration: none;
+	color: #000000;
+	:hover {
+	  color: #000000;
+	}
+  }
+}

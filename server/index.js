@@ -33,9 +33,7 @@ var bundler = new WebpackDevServer(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('/api/test', (req, res) => {
-  res.send({ test: 'test' });
-});
+app.use('/api', require('./api'));
 
 app.get('*', (req, res) => {
   res.sendFile('index.html', { root: process.env.PWD + '/dist' });
