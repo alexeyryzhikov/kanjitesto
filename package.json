@@ -1,0 +1,24 @@
+{
+  "name": "kanjitesto",
+  "version": "1.0.0",
+  "description": "Application to help learn Kanji and Japanese words",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexeyryzhikov/kanjitesto.git"
+  },
+  "keywords": [
+    "kanji",
+    "japanese",
+    "study"
+  ],
+  "author": "Alexey Ryzhikov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alexeyryzhikov/kanjitesto/issues"
+  },
+  "homepage": "https://github.com/alexeyryzhikov/kanjitesto#readme"
+}
