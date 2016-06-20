@@ -7,6 +7,8 @@ import { persistState } from 'redux-devtools';
 import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
+import protectedPages from '../middleware/protectedPages';
+
 const logger = createLogger({
   level: 'info',
   collapsed: true
@@ -22,7 +24,7 @@ export default function configureStore(initialState) {
     rootReducer,
     initialState,
     compose(
-      applyMiddleware(thunk, router, logger),
+      applyMiddleware(thunk, protectedPages, router, logger),
       DevTools.instrument(),
       persistState(
         window.location.href.match(

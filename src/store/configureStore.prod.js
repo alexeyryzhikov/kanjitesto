@@ -4,6 +4,8 @@ import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
 
+import protectedPages from '../middleware/protectedPages';
+
 const router = routerMiddleware(browserHistory);
 
 /**
@@ -13,6 +15,6 @@ export default function configureStore(initialState) {
   return createStore(
     rootReducer,
     initialState,
-    applyMiddleware(thunk, router)
+    applyMiddleware(thunk, protectedPages, router)
   );
 }
