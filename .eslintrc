@@ -5,13 +5,31 @@
     "browser": true,
     "node": true
   },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
   "rules": {
     "react/jsx-no-bind": 0,
     "react/sort-comp": 0,
     "comma-dangle": [2, "never"],
-    "no-shadow": 0
+    "no-shadow": 0,
+    "max-len": [2, 120],
+    "react/wrap-multilines": 0,
+    "prefer-const": 1
   },
   "plugins": [
-    "react"
-  ]
+    "react",
+    "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  }
 }

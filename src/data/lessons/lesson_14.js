@@ -20,7 +20,7 @@ export default {
     hiragana: 'ちかい',
     type: 'adj',
     en: 'near',
-    ru: ''
+    ru: 'близкий'
   }, {
     jp: '近く',
     type: 'adv',

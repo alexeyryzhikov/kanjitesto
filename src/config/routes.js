@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
-import LessonsPage from '../components/LessonsPage';
-import LessonPage from '../components/LessonPage';
+import LessonsPage from '../containers/LessonsPage';
+import LessonPage from '../containers/LessonPage';
 import TestPage from '../components/TestPage';
 import NotFoundPage from '../containers/NotFoundPage';
 
