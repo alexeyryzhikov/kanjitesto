@@ -23,7 +23,7 @@ export default class LessonList extends Component {
         </thead>
         <tbody>
         { lessons.map(lesson =>
-          <ListItem key={lesson.id} name={lesson.name} id={lesson.id} startTest={startTest}/>
+          <ListItem key={lesson.id} name={lesson.name} id={lesson.id} lesson={lesson} startTest={startTest}/>
         )}
         </tbody>
       </table>

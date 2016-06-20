@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
-import counter from './counter';
 import lessons from './lessons';
+import test from './test';
 
 const rootReducer = combineReducers({
-  counter,
   routing,
-  lessons
+  lessons,
+  test
 });
 
 export default rootReducer;

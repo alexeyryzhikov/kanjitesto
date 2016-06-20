@@ -6,12 +6,13 @@ export default class ListItem extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
+    lesson: PropTypes.object.isRequired,
     startTest: PropTypes.func.isRequired
   };
 
   render() {
-    const { name, id, startTest } = this.props;
-    const onClick = () => startTest(id);
+    const { name, id, startTest, lesson } = this.props;
+    const onClick = () => startTest(lesson);
 
     return <tr>
       <td>{name}</td>
