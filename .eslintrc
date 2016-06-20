@@ -20,7 +20,8 @@
     "no-shadow": 0,
     "max-len": [2, 120],
     "react/wrap-multilines": 0,
-    "prefer-const": 1
+    "prefer-const": 1,
+    "react/jsx-closing-bracket-location": 0
   },
   "plugins": [
     "react",

@@ -1,18 +1,14 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import LessonsList from '../components/LessonList';
+import LessonsList from '../components/lessonList/LessonList';
 
-import { startLessonTest } from '../actions/test'
+import { startLessonTest } from '../actions/test';
 
 export default connect(
-  state => {
-    return {
-      lessons: state.lessons
-    }
-  },
-  dispatch => {
-    return bindActionCreators({
-      startTest: startLessonTest
-    }, dispatch)
-  }
-)(LessonsList)
+  state => ({
+    lessons: state.lessons
+  }),
+  dispatch => bindActionCreators({
+    startTest: startLessonTest
+  }, dispatch)
+)(LessonsList);

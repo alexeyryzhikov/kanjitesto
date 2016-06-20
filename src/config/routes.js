@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
 import LessonsPage from '../containers/LessonsPage';
 import LessonPage from '../containers/LessonPage';
-import TestPage from '../components/TestPage';
+import TestPage from '../containers/TestPage';
 import NotFoundPage from '../containers/NotFoundPage';
 
 export default (
