@@ -10,7 +10,7 @@ export default class KanjiCard extends Component {
   render() {
     const { kanji } = this.props;
     return <div className={style.kanji}>
-      <a href={`#{kanji.letter}`}>{kanji.letter}</a>
+      <a href={`#${kanji.letter}`}>{kanji.letter}</a>
     </div>;
   }
 }
