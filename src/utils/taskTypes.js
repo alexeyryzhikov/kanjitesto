@@ -1,1 +1,1 @@
-export const CHOOSE_ONE = "CHOOSE_ONE";
+export const CHOOSE_ONE = 'CHOOSE_ONE';

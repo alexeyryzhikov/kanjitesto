@@ -19,8 +19,9 @@ export function startLessonTest(lesson) {
   };
 }
 
-export function nextTask() {
+export function nextTask(response) {
   return {
-    type: NEXT_TASK
+    type: NEXT_TASK,
+    response
   };
 }

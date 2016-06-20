@@ -12,11 +12,11 @@ export default class Test extends Component {
   render() {
     const { task, nextTask } = this.props;
 
-    if (task.type !== TaskTypes.CHOOSE_ONE) {
-      return null;
+    if (task.type === TaskTypes.CHOOSE_ONE) {
+      const { prompt, options, correctAnswer } = task;
+      return <ChooseOneTask prompt={prompt} options={options} correctAnswer={correctAnswer} taskComplete={nextTask}/>;
     }
 
-    const { prompt, options, correctAnswer } = task;
-    return <ChooseOneTask prompt={prompt} options={options} correctAnswer={correctAnswer} taskComplete={nextTask}/>;
+    return null;
   }
 }

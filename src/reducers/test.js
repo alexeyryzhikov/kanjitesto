@@ -41,7 +41,8 @@ function prepareTest(lessons, limitWordsToLessons = true, taskCount = 10) {
 
   return {
     tasks,
-    currentTask: 0
+    currentTask: 0,
+    complete: false
   };
 }
 
@@ -51,10 +52,26 @@ export default createReducer({}, {
 
     return prepareTest(lessons, true);
   },
-  [TestActions.NEXT_TASK](state) {
+  [TestActions.NEXT_TASK](state, action) {
+    const { response } = action;
+    const currentTask = state.tasks[state.currentTask];
+    const tasks = state.tasks.map(task => {
+      if (task !== currentTask) {
+        return task;
+      }
+      return {
+        ...task,
+        response
+      };
+    });
+
+    const hasNextTask = state.tasks.length > state.currentTask + 1;
+
     return {
       ...state,
-      currentTask: state.currentTask + 1
+      tasks,
+      currentTask: hasNextTask ? state.currentTask + 1 : state.currentTask,
+      complete: !hasNextTask
     };
   }
 });

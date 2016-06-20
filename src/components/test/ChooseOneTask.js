@@ -17,7 +17,7 @@ export default class ChooseOneTask extends Component {
       this.setState({
         selected: null
       });
-      this.props.taskComplete();
+      this.props.taskComplete(option);
     } else {
       this.setState({
         selected: option
